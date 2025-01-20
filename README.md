@@ -8,14 +8,15 @@ The nonlinear dynamics and uncertainties of robotic manipulators necessitate adv
 
 The KUKA LWR IV+ robot is a seven DOF manipulator, whose link dynamics is governed by
 
-$$\begin{align}    M\left(x_{\theta},w_c\right) \dot{x}_{\omega}+v\left(x_{\theta}, x_{\omega},w_c\right)+g_{v}\left(x_{\theta},w_c\right) &=&u\\ 
-\dot{x}_{\theta} &=& x_{\omega}
-\end{align}$$
+$$\begin{cases}    
+M\left(x_{\theta},w_c\right) \dot{x}_{\omega}+v\left(x_{\theta}, x_{\omega},w_c\right)+g_{v}\left(x_{\theta},w_c\right) &= u\\ 
+\dot{x}_{\theta} &= x_{\omega}
+\end{cases}$$
 
 The equivalent 2R planar robot, moving on a vertical plabe, is characterized by the following matrices
 
-$\begin{aligned}
-M\left(x_{\theta},w_c\right) & =
+$$ 
+M\left(x_{\theta},w_c\right)  =
 \begin{bmatrix}
 a_{2}+a_{3} & a_{2} \\
 a_{2} & a_{2}
@@ -23,13 +24,15 @@ a_{2} & a_{2}
 \begin{bmatrix}
 2 a_{1} & a_{1} \\
 a_{1} & 0
-\end{bmatrix}, \\
-v\left(x_{\theta}, x_{\omega}, w_c\right) & =a_{1} \sin \left(x_{\theta 2}\right)
+\end{bmatrix}$$
+
+$$v\left(x_{\theta}, x_{\omega}, w_c\right) =a_{1} \sin \left(x_{\theta 2}\right)
 \begin{bmatrix}
 -x_{\omega 2}^{2}-2 x_{\omega 1} x_{\omega 2} \\
 x_{\omega 1}^{2}
-\end{bmatrix}, \\
-g_{v}\left(x_{\theta}, w_c\right) & =\cos \left(x_{\theta 1}+x_{\theta 2}\right)
+\end{bmatrix}$$
+
+$$g_{v}\left(x_{\theta}, w_c\right) =\cos \left(x_{\theta 1}+x_{\theta 2}\right)
 \begin{bmatrix}
 m_{2} g \ell_{2} \\
 m_{2} g \ell_{2}
@@ -38,8 +41,7 @@ m_{2} g \ell_{2}
 \begin{bmatrix}
 \left(m_{1}+m_{2}\right) \ell_{1} \mathrm{~g} \\
 0
-\end{bmatrix}
-\end{aligned}$
+\end{bmatrix}$$
 
 ## Exogenous system
 
