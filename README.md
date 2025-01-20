@@ -9,7 +9,10 @@ The nonlinear dynamics and uncertainties of robotic manipulators necessitate adv
 The KUKA LWR IV+ robot is a seven DOF manipulator, whose link dynamics is governed by
 
 $$
-\dot{x}\_{\theta} = x_{\omega}
+\begin{cases}    
+M\left(x_{\theta},w_c\right) \dot{x}\_{\omega}+v\left(x_{\theta}, x_{\omega},w_c\right)+g_{v}\left(x_{\theta},w_c\right) & =& u \\ 
+\dot{x}\_{\theta} & =& x_{\omega}
+\end{cases}
 $$
 
 
