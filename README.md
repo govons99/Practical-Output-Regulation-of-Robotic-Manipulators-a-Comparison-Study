@@ -97,46 +97,6 @@ Explaination of the Pattern
 - `controller`: The control technique used, i.e., CTC, SMC and IMB.
 
 
-## Output regulation
-
-The project includes the MATLAB code for computing both the polynomial approximation and the IMB gains, defined respectively in equations (A.5) and (A.8) in the manuscript.
-
-
-Internal model matrices
-
-$$\Phi =
-\begin{bmatrix}
-    0 & I & 0 & 0 & 0 \\
-    0 & 0 & I & 0 & 0 \\
-    0 & 0 & 0 & I & 0 \\
-    0 & 0 & 0 & 0 & I \\
-    0 & -4f^5I & 0 & -5f^3I & 0
-\end{bmatrix}
-\quad
-\Gamma =
-\begin{bmatrix}
-    0 \\ 0 \\ 0 \\ 0 \\ I
-\end{bmatrix}$$
-
-The polynomial approximation
-
-$$\rho = 
-\begin{bmatrix}
-26.3200 & 3.7930 & 2.2120 & 2.5940 & -13.1400 & -8.0090 & -0.4480 & -0.0290 & -0.8191 & -3.4000 & 1.7500 & 2.8240 \\
-12.7600 & 0.0000 & -2.7040 & -8.8020 & -13.4700 & -7.3400 & 0.0000 & 0.0000 & 0.0000 & 0.3085 & 1.8080 & 2.9150 \\
-30.6900 & 3.5940 & 2.2450 & 45.8600 & 13.1200 & 7.4070 & 0.5146 & 0.0162 & 0.5729 & 5.2840 & 1.7820 & 2.7200 \\
-16.9400 & 0.0000 & -2.7040 & -8.8020 & -13.4700 & -7.9120 & 0.0000 & 0.0000 & 0.0000 & 0.3085 & 1.8080 & 2.9150
-\end{bmatrix}
-$$
-
-Gain synthesized by the **IMB** technique (A.8)
-
-$$\mathbf{K}=
-\begin{bmatrix}
-    -501.1559 & -51.6762 & -61.0883 & -13.9976 & -969.4690 & -58.9046 & -1045.9322 & 1.2262 & -3376.5894 & -224.8351 & -674.4890 & -3.7868 & -1028.4645 & 75.5330 \\
-    60.5655 & -192.7508 & -12.5232 & -26.7909 & 194.7745 & -364.1018 & 374.1509 & -376.6959 & 624.2392 & -1274.0779 & 228.6800 & -244.2496 & 171.1357 & -390.1254
-\end{bmatrix}
-$$
 
 
 
